@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BelerZone — Beats & Instrumentales</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">Beler<span>Zone</span></div>
+  <nav>
+    <a href="#catalogue">Catalogue</a>
+    <a href="#" id="nav-mes-commandes" class="hidden">Mes commandes</a>
+    <button id="btn-auth">Connexion</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Des instrus qui font vibrer le Mali 🎧</h1>
+  <p>Achetez et téléchargez des beats exclusifs pour vos prochains sons.</p>
+</section>
+
+<section id="catalogue" class="catalogue">
+  <h2>Catalogue</h2>
+  <div id="beats-list" class="beats-grid">
+    <p class="loading">Chargement des beats...</p>
+  </div>
+</section>
+
+<!-- Modale connexion / inscription -->
+<div id="modal-auth" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" id="close-auth">&times;</span>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="login">Connexion</button>
+      <button class="tab-btn" data-tab="register">Inscription</button>
+    </div>
+
+    <form id="form-login" class="auth-form">
+      <input type="email" id="login-email" placeholder="Email" required>
+      <input type="password" id="login-password" placeholder="Mot de passe" required>
+      <button type="submit">Se connecter</button>
+      <p class="form-error" id="login-error"></p>
+    </form>
+
+    <form id="form-register" class="auth-form hidden">
+      <input type="text" id="register-username" placeholder="Nom d'utilisateur" required>
+      <input type="email" id="register-email" placeholder="Email" required>
+      <input type="password" id="register-password" placeholder="Mot de passe" required>
+      <button type="submit">S'inscrire</button>
+      <p class="form-error" id="register-error"></p>
+    </form>
+  </div>
+</div>
+
+<!-- Modale mes commandes -->
+<div id="modal-orders" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" id="close-orders">&times;</span>
+    <h3>Mes commandes</h3>
+    <div id="orders-list"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>&copy; 2026 BelerZone — Tous droits réservés</p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
